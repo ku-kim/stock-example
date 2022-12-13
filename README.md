@@ -4,6 +4,16 @@
 
 원본 저장소는 [이곳](https://github.com/sangyongchoi/stock-example/blob/main/README.md)에서 확인하실 수 있습니다.
 
+---
+
+# Docker-compose : MySQL 8.0
+```shell
+# up
+docker-compose -f  mysql/docker-compose.yml up -d
+
+# down
+docker-compose -f  mysql/docker-compose.yml down
+```
 
 ---
 
