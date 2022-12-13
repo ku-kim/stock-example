@@ -25,5 +25,15 @@ docker exec -it stock_example_redis redis-cli
 ```
 
 ---
+## 동시성 이슈 해결 방법
+1. synchronized
+2. DB
+   - Pessimistic Lock
+   - Optimistic Lock
+   - Named Lock
+3. Redis
+   - Lettuce (redis command - setnx)
+   - Redisson (redis command - pub/sub)
+---
 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fku-kim%2Fstock-example&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
