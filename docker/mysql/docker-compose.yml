@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  db:
+    image: mysql:8.0.30
+    container_name: stock_exmple_mysql
+    platform: linux/x86_64
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: stock_example
+      MYSQL_USER: kukim
+      MYSQL_PASSWORD: 1234
+      TZ: Asia/Seoul
+    volumes:
+      - ../db/mysql/data:/var/lib/mysql
+      - ../db/mysql/config:/etc/mysql/conf.d
+      - ../db/mysql/init:/docker-entrypoint-initdb.d

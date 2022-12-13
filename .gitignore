@@ -169,3 +169,8 @@ Temporary Items
 
 .idea
 
+
+# db
+/docker/db/mysql/config/**
+/docker/db/mysql/data/**
+/docker/db/mysql/init/**
