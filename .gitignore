@@ -171,6 +171,6 @@ Temporary Items
 
 
 # db
-/docker/db/mysql/config/**
-/docker/db/mysql/data/**
-/docker/db/mysql/init/**
+/docker/mysql/mysql/config/**
+/docker/mysql/mysql/data/**
+/docker/mysql/mysql/init/**

@@ -1,0 +1,29 @@
+version: "3.9"
+services:
+  db:
+    container_name: stock_example_mysql
+    image: mysql:8.0.30
+    platform: linux/x86_64
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: stock_example
+      MYSQL_USER: user1
+      MYSQL_PASSWORD: 1234
+      TZ: Asia/Seoul
+    volumes:
+      - ./mysql/mysql/data:/var/lib/mysql
+      - ./mysql/mysql/config:/etc/mysql/conf.d
+      - ./mysql/mysql/init:/docker-entrypoint-initdb.d
+
+  redis:
+    container_name: stock_example_redis
+    image: redis:7.0.5
+    restart: always
+    ports:
+      - "6379:6379"
+    command: redis-server /usr/local/conf/redis.conf
+    volumes:
+      - ./conf/redis.conf:/usr/local/conf/redis.conf

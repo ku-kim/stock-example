@@ -6,13 +6,22 @@
 
 ---
 
-# Docker-compose : MySQL 8.0
+# Docker-compose : MySQL 8.0 & Redis
 ```shell
+## Path : 최상위 디렉토리
 # up
-docker-compose -f  mysql/docker-compose.yml up -d
+docker-compose -f docker/docker-compose.yml up -d
 
 # down
-docker-compose -f  mysql/docker-compose.yml down
+docker-compose -f docker/docker-compose.yml down
+
+# mysql 연결
+docker exec -it stock_example_mysql bash # mysql 컨테이너 bash 연결
+> mysql -u user1 -p  # 컨테이너 배쉬 안에서 실행 (password 1234)
+
+# redis 연결
+docker exec -it stock_example_redis redis-cli
+
 ```
 
 ---
